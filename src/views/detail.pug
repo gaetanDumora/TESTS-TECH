@@ -1,0 +1,13 @@
+extends layouts/main
+
+block layout-content
+    div.View
+        h3.Banner Voici ce que nous avons trouvé sur #{name}
+        div.Message
+            h3 Quelques chiffres:
+            span Type d'entreprise: #{companyType}
+            span Effectif moyen: #{effectif}
+            span Dernier CA: #{chiffreAffaires}
+            a(href="/")
+                button.NavButton Ok
+                

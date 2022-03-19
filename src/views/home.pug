@@ -1,0 +1,24 @@
+extends layouts/main
+
+block layout-content
+    div.View
+        h3.Banner Recherche d'informations sur une entreprise en activité
+        div.Message
+            div.Title
+                h3 Saisir le nom d'une entrepise
+            div.Form
+                form(action="/" method="GET") 
+                    div.InForm
+                        input(type="text" name="companyName" placeholder="ex:Petzl" required)
+                    div.InForm
+                        button(type="submit").NavButton Rechercher
+            span.Details Source INSEE API
+    if companies
+        h3.Banner Etablissements correspondants aux critères: 
+        div.Cards 
+            each company in {companies}
+                each c in  company
+                    div.Card
+                        a(href="/details?name=" + (c.denominationUniteLegale).toLowerCase().replace(" ","-") + "&siren=" + c.siren)                    
+                            p #{c.denominationUniteLegale}
+                            p #{c.siren}

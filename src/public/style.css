@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono");
+
+:root {
+    --ui-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
+        0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+    fill: rgba(0, 0, 0, 0.54);
+    --ui-shadow-border: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    color: #2a3747;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.View {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-size: cover;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.Banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+    padding: 15px;
+    font-family: "Share Tech Mono", monospace;
+    border-bottom: var(--ui-shadow-border);
+    box-shadow: var(--ui-shadow);
+}
+
+.Message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-bottom: var(--ui-shadow-border);
+    box-shadow: var(--ui-shadow);
+}
+
+.Details {
+    font-size: x-small;
+    font-weight: bold;
+    color: rgb(161, 161, 161);
+}
+
+.Form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.InForm {
+    padding: 10px;
+}
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid #fa4141;
+  }
+.NavButton {
+    height: 40px;
+    width: 150px;
+    background: #fa4141;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-style: none;
+    text-transform: capitalize;
+    border-bottom: var(--ui-shadow-border);
+    box-shadow: var(--ui-shadow);
+}
+
+.Cards {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 30px;
+    padding: 20px;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.Card {
+    height: 100px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #fa4141;
+    box-shadow: var(--ui-shadow);
+}
+.Card:hover {
+    background: #fa4141;
+    color: white;
+  }
